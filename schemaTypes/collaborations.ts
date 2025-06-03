@@ -6,7 +6,8 @@ import {Rule as RuleType} from 'sanity'
  * Fields:
  *   - albumCover: Required image
  *   - albumName: Optional string
- *   - songName: Optional string (displayed if albumName not present)
+ *   - songs: Optional list of strings (displayed if album name not present)
+ *   - releaseDate: Required date
  *   - artistName: Required string
  *   - contributions: Array of strings (example: "Engineering", "Mixing")
  */
@@ -29,10 +30,18 @@ export const collaborations = {
       description: 'Album name (optional)',
     },
     {
-      name: 'songName',
-      title: 'Song Name',
-      type: 'string',
-      description: 'Song name (displayed if album name not present, optional)',
+      name: 'songs',
+      title: 'Songs',
+      type: 'array',
+      of: [{type: 'string'}],
+      description: 'List of song names (displayed if album name not present, optional)',
+    },
+    {
+      name: 'releaseDate',
+      title: 'Release Date',
+      type: 'date',
+      validation: (Rule: RuleType) => Rule.required(),
+      description: 'Release date (required)',
     },
     {
       name: 'artistName',
