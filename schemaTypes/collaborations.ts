@@ -58,4 +58,16 @@ export const collaborations = {
       description: 'List of contributions (e.g., "Engineering", "Mixing")',
     },
   ],
+  orderings: [
+    {
+      title: 'Release Date, Newest First',
+      name: 'releaseDateDesc',
+      by: [{field: 'releaseDate', direction: 'desc'}],
+    },
+    {
+      title: 'Release Date, Oldest First',
+      name: 'releaseDateAsc',
+      by: [{field: 'releaseDate', direction: 'asc'}],
+    },
+  ],
 }

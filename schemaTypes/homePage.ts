@@ -14,4 +14,11 @@ export default {
       of: [{type: 'imageBlock'}, {type: 'videoBlock'}, {type: 'textBlock'}],
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Home Page',
+      }
+    },
+  },
 }

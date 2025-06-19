@@ -13,4 +13,11 @@ export const contactPage = {
       description: 'Image to display on the contact page',
     },
   ],
+  preview: {
+    prepare() {
+      return {
+        title: 'Contact Page',
+      }
+    },
+  },
 }
