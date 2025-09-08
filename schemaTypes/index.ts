@@ -6,6 +6,7 @@ import homePage from './homePage'
 import imageBlock from './blocks/imageBlock'
 import videoBlock from './blocks/videoBlock'
 import textBlock from './blocks/textBlock'
+import {release} from './release'
 
 export const schemaTypes = [
   collaborations,
@@ -16,4 +17,5 @@ export const schemaTypes = [
   imageBlock,
   videoBlock,
   textBlock,
+  release,
 ]
