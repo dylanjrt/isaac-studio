@@ -70,5 +70,12 @@ export const contactItem = {
       validation: (Rule: RuleType) => Rule.required(),
       description: 'Displayed as (required)',
     },
+    {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+      validation: (Rule: RuleType) => Rule.required().integer().min(0),
+      description: 'Order in which this contact item should be displayed (lower numbers appear first)',
+    },
   ],
 }
