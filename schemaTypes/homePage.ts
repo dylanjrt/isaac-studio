@@ -11,7 +11,12 @@ export default {
       name: 'content',
       title: 'Page Content',
       type: 'array',
-      of: [{type: 'imageBlock'}, {type: 'videoBlock'}, {type: 'textBlock'}],
+      of: [
+        {type: 'imageBlock'},
+        {type: 'videoBlock'},
+        {type: 'textBlock'},
+        {type: 'reference', to: [{type: 'music'}]},
+      ],
     },
   ],
   preview: {
